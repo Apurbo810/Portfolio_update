@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, coffee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.bg-tech-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-tech-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: repeat;
+  background-size: 120px;
+  opacity: 0.05;       /* this affects ONLY the background */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.tagcloud-container span {
+  cursor: pointer;
+  display: inline-block;
+  color: #f4d29a; /* Coffee theme golden accent */
+  transition: 0.2s ease;
+}
+
+.tagcloud-container span:hover {
+  color: #ffb347;
+  transform: scale(1.2);
+}
+#skillSphere {
+  filter: drop-shadow(0 0 15px rgba(255, 193, 7, 0.3));
+}
+
+.badge-soft {
+  @apply px-3 py-[2px] rounded-full text-sm font-medium backdrop-blur-md border;
+}
+
+
+
+.pixel-square {
+  image-rendering: pixelated;
+  border-radius: 4px;
+}
+
+.pixel-box {
+  image-rendering: pixelated;
+  box-shadow: 0px 0px 0px 4px #000 inset;
+}
