@@ -23,6 +23,16 @@ export const ProjectData: projects[] = [
       "A smart web platform for tracking recyclable waste, managing community recycling operations, and improving environmental awareness.",
     link: "https://community-based-recycle-tracking-live.vercel.app/",
   },
-
-
+  {
+    title: "Moon Medical Tourism",
+    description:
+      "A modern hospital and medical tourism website featuring doctor profiles, departments, medical news, and an admin dashboard for managing healthcare content. Built with React, MongoDB, and Tailwind CSS.",
+    link: "https://moon-medical-tourism.vercel.app/",
+  },
+  {
+    title: "AOMOZ BY MONIRA",
+    description:
+      "A modern clothing e-commerce website for showcasing and selling fashion products with a clean, responsive design and smooth user experience.",
+    link: "https://aomoz-by-monira-website.vercel.app/",
+  },
 ];

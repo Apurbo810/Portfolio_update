@@ -43,7 +43,7 @@ export default function Hero() {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/apurbo-shariar-aab9b3251/"
+              href="https://www.linkedin.com/in/shariar-apurbo-aab9b3251/"
               target="_blank"
               className="btn btn-primary btn-sm flex items-center gap-2"
             >
