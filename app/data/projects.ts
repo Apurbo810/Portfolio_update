@@ -5,11 +5,17 @@ export interface projects {
 }
 
 export const ProjectData: projects[] = [
-  {
-    title: "Live Perwatch",
+    {
+    title: "AOMOZ BY MONIRA",
     description:
-      "Live Per Watch is an e-commerce website that sells premium perfumes through a modern and user-friendly interface.",
-    link: "https://www.liveperwatch.com/",
+      "A modern clothing e-commerce website for showcasing and selling fashion products with a clean, responsive design and smooth user experience.",
+    link: "https://aomoz-by-monira-website.vercel.app/",
+  },
+  {
+    title: "Moon Medical Tourism",
+    description:
+      "A modern hospital and medical tourism website featuring doctor profiles, departments, medical news, and an admin dashboard for managing healthcare content. Built with React, MongoDB, and Tailwind CSS.",
+    link: "https://moon-medical-tourism.vercel.app/",
   },
   {
     title: "Success Freelancer",
@@ -24,15 +30,9 @@ export const ProjectData: projects[] = [
     link: "https://community-based-recycle-tracking-live.vercel.app/",
   },
   {
-    title: "Moon Medical Tourism",
+    title: "Live Perwatch",
     description:
-      "A modern hospital and medical tourism website featuring doctor profiles, departments, medical news, and an admin dashboard for managing healthcare content. Built with React, MongoDB, and Tailwind CSS.",
-    link: "https://moon-medical-tourism.vercel.app/",
-  },
-  {
-    title: "AOMOZ BY MONIRA",
-    description:
-      "A modern clothing e-commerce website for showcasing and selling fashion products with a clean, responsive design and smooth user experience.",
-    link: "https://aomoz-by-monira-website.vercel.app/",
+      "Live Per Watch is an e-commerce website that sells premium perfumes through a modern and user-friendly interface.",
+    link: "https://www.liveperwatch.com/",
   },
 ];
