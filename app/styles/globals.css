@@ -55,3 +55,78 @@ html {
   image-rendering: pixelated;
   box-shadow: 0px 0px 0px 4px #000 inset;
 }
+
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  @apply fixed top-0 left-0 right-0;
+  @apply bg-base-100/70 backdrop-blur-xl;
+  @apply border-b border-base-300/40;
+
+  z-index: 1000;
+
+  transition:
+    transform 0.35s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-visible {
+  transform: translateY(0);
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-container {
+  @apply mx-auto flex items-center justify-between;
+  @apply max-w-6xl px-6 py-4;
+}
+
+.navbar-logo {
+  @apply text-xl font-black tracking-wide select-none;
+}
+
+.navbar-menu {
+  @apply flex items-center gap-6;
+}
+
+.nav-link {
+  @apply relative cursor-pointer font-medium;
+  @apply transition-all duration-300;
+}
+
+.nav-link:hover {
+  @apply text-primary;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to right,
+    #f59e0b,
+    #fbbf24,
+    #f59e0b
+  );
+
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
