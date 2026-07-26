@@ -7,7 +7,7 @@ export default function SkillSphere() {
 
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://www.goat1000.com/tagcanvas.js";
+    script.src = "/js/tagcanvas.js";
     script.async = true;
   
     script.onload = () => {
