@@ -1,16 +1,46 @@
 "use client";
 
-export default function Navbar() {
-  return (
-    <nav className="w-full py-4 px-6 bg-base-100 shadow-md sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <h1 className="font-bold text-xl">Apurbo</h1>
+import { getLenis } from "@/app/lib/lenis";
 
-        <ul className="flex items-center gap-6 opacity-80">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
+const links = [
+  { name: "Home", id: "home" },
+  { name: "Skills", id: "skills" },
+  { name: "Projects", id: "projects" },
+  { name: "Education", id: "education" },
+];
+
+export default function Navbar() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    const lenis = getLenis();
+
+    if (lenis) {
+      lenis.scrollTo(element, {
+        offset: -80,
+        duration: 1.5,
+      });
+    }
+  };
+
+  return (
+    <nav className="sticky top-0 z-50 w-full bg-base-100/80 backdrop-blur-md border-b border-base-300">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <h1 className="text-xl font-bold">Apurbo</h1>
+
+        <ul className="flex items-center gap-6">
+          {links.map((link) => (
+            <li key={link.id}>
+              <button
+                onClick={() => scrollToSection(link.id)}
+                className="cursor-pointer transition-all duration-300 hover:text-primary hover:-translate-y-0.5"
+              >
+                {link.name}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

@@ -2,6 +2,7 @@ import "./styles/globals.css";
 import "./styles/Typeeffect.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SmoothScroll from "./components/SmoothScroll";
 
 export const metadata = {
   title: "Apurbo — Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="coffee" className="scroll-smooth">
       <body className="antialiased">
+        <SmoothScroll />
         <Navbar />
         {children}
         <Footer />
