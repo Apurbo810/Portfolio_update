@@ -18,8 +18,9 @@ export default function Skill() {
   return (
     <section
       id="skills"
-      className="py-24 space-y-24 max-w-7xl mx-auto px-6"
+      className="w-full py-24 space-y-24 px-4 md:px-8"
     >
+      {/* Heading */}
       <motion.h1
         className="text-5xl md:text-6xl font-black text-center"
         initial={{ opacity: 0, y: -40 }}
@@ -30,27 +31,30 @@ export default function Skill() {
         Skills
       </motion.h1>
 
-      <StickySkillCard
-        title="Web Development"
-        description="Building modern, scalable, responsive and production-ready web applications."
-        skills={skillsDataWeb}
-        visual={<SkillSphere />}
-      />
+      {/* Skills Content */}
+      <div className="w-full max-w-7xl mx-auto space-y-24">
+        <StickySkillCard
+          title="Web Development"
+          description="Building modern, scalable, responsive and production-ready web applications."
+          skills={skillsDataWeb}
+          visual={<SkillSphere />}
+        />
 
-      <StickySkillCard
-        title="Game Development"
-        description="Creating immersive gameplay, interactive experiences and real-time systems."
-        skills={skillsDataGame}
-        visual={<GameJoystick />}
-        reverse
-      />
+        <StickySkillCard
+          title="Game Development"
+          description="Creating immersive gameplay, interactive experiences and real-time systems."
+          skills={skillsDataGame}
+          visual={<GameJoystick />}
+          reverse
+        />
 
-      <StickySkillCard
-        title="Networking"
-        description="Understanding networking, infrastructure, routing, security and communication protocols."
-        skills={skillsDataNetwork}
-        visual={<NetworkLogo />}
-      />
+        <StickySkillCard
+          title="Networking"
+          description="Understanding networking, infrastructure, routing, security and communication protocols."
+          skills={skillsDataNetwork}
+          visual={<NetworkLogo />}
+        />
+      </div>
     </section>
   );
 }
